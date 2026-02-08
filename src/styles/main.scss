@@ -1,3 +1,9 @@
 @use './base/fonts';
 @use './base/variables';
 @use './base/base';
+
+@use './layout/header';
+@use './layout/section';
+@use './layout/hero';
+
+@use './components/button';

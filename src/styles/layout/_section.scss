@@ -1,0 +1,28 @@
+.section {
+  padding: 0 212px;
+
+  &__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+  padding: 0 112px;
+
+  &__inner {
+    margin: 0 auto;
+  }
+}
+}
+
+@media (max-width: 360px) {
+  .section {
+  padding: 0 42px;
+
+  &__inner {
+    margin: 0 auto;
+  }
+}
+}

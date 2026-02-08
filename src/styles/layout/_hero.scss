@@ -1,0 +1,33 @@
+.hero {
+  position: relative;
+  min-height: 98vh;
+  background-color: #fff;
+  background: 
+    linear-gradient(
+      to top,
+      rgba(152, 195, 232, 0.2) 10%,
+      rgba(152, 195, 232, 0) 30%
+    ),
+    url(../../assets/icon/illustration.svg) no-repeat right 24px bottom 56px;
+  background-size: 50% auto;
+
+  &__content {
+    padding-top: 15%;
+
+    &__heading {
+      font-size: 64px;
+      line-height: 74px;
+      letter-spacing: 0.04em;
+    }
+    &__text {
+      max-width: 426px;
+      font-size: 16px;
+      opacity: 60%;
+      line-height: 26px;
+      letter-spacing: 0.05em;
+
+      margin-top: 32px;
+      margin-bottom: 72px;
+    }
+  }
+}

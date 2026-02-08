@@ -1,6 +1,8 @@
 $font-heading: 'Galien', serif;
 $font-body: 'Gilroy', system-ui, -apple-system, sans-serif;
 
+$white: #FFFFFF;
+
 $blue_01: #1F3F68;
 $blue_02: #316099;
 
@@ -8,7 +10,13 @@ $blue_04: #5A98D0;
 $blue_05: #98C3E8;
 
 $color-body: $blue_01;
-$color-shadow: #1070B133;
+$color-shadow: #1070B1;
 
 $color-button: $blue_04;
-$color-button-shadow: #356EAD33;
+$color-button-shadow: rgba(53, 110, 173, 0.2);
+$color-button-shadow-hover: rgba(53, 110, 173, 0.3);
+
+$shadow-button: 5px 10px 20px $color-button-shadow;
+$shadow-button-hover: 5px 10px 20px $color-button-shadow-hover;
+$shadow-card: 5px 20px 50px $color-shadow;
+$shadow-modal: 5px 10px 50px $color-shadow;
