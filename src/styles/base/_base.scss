@@ -1,0 +1,11 @@
+@use 'variables' as *;
+
+body {
+  font-family: $font-body;
+  font-weight: 400;
+  color: $color-body;
+}
+
+h1 {
+  font-family: $font-heading;
+}
