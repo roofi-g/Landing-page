@@ -11,23 +11,57 @@
     url(../../assets/icon/illustration.svg) no-repeat right 24px bottom 56px;
   background-size: 50% auto;
 
-  &__content {
+  &__inner {
     padding-top: 15%;
-
-    &__heading {
+    padding-bottom: 15%;
+  }
+  &__heading {
       font-size: 64px;
       line-height: 74px;
       letter-spacing: 0.04em;
+  }
+  &__text {
+    max-width: 426px;
+    font-size: 16px;
+    opacity: 60%;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+
+    margin-top: 32px;
+    margin-bottom: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+   .hero {
+      background-size: 40% auto;
+      min-height: 60vh;
+
+      &__inner {
+        padding-top: 20%; 
+        padding-bottom: 20%;
+      }
+      &__heading {
+        font-size: 44px;
+        line-height: 48px;
+      }
+    }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    min-height: 94vh;
+
+    &__inner {
+      padding-top: 30%;
+      text-align: center;
+    }
+    &__heading {
+      font-size: 34px;
+      line-height: 46px;
     }
     &__text {
-      max-width: 426px;
-      font-size: 16px;
-      opacity: 60%;
-      line-height: 26px;
-      letter-spacing: 0.05em;
-
-      margin-top: 32px;
-      margin-bottom: 72px;
+      margin-bottom: 30px;
     }
   }
 }

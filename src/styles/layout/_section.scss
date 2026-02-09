@@ -9,20 +9,20 @@
 
 @media (max-width: 768px) {
   .section {
-  padding: 0 112px;
+    padding: 0 112px;
 
-  &__inner {
-    margin: 0 auto;
+    &__inner {
+      margin: 0 auto;
+    }
   }
-}
 }
 
 @media (max-width: 360px) {
   .section {
-  padding: 0 42px;
+    padding: 0 42px;
 
-  &__inner {
-    margin: 0 auto;
+    &__inner {
+      margin: 0 auto;
+    }
   }
-}
 }

@@ -1,0 +1,78 @@
+@use '../base/variables' as *;
+
+.card {
+  max-width: 380px;
+  padding: 48px;
+  border-radius: 10px;
+  box-shadow: $shadow-card;
+
+  &__media {
+    // width: 224px;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 56px;
+  }
+  &__title {
+    line-height: 30px;
+    letter-spacing: 0.05em;
+  }
+  &__text {
+    opacity: 60%;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    font-family: $font-body;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+
+    color: $blue_04;
+    text-decoration: none;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    margin-right: 24px;
+  }
+  &__arrow {
+      transition: transform 0.2s ease;
+    }
+  &__link:hover {
+    opacity: 80%;
+  }
+  &__link:hover &__arrow {
+    transform: translateX(4px);
+  }
+}
+
+.margin__left-1 {
+  max-width: 182px;
+  margin-left: 26px;
+}
+.margin__left-2 {
+  max-width: 224px;
+  margin-top: -70px;
+  margin-left: 30px;
+  margin-bottom: 51px;
+}
+.margin__left-3 {
+  max-width: 156px;
+  margin-left: 52px;
+}
+
+@media (max-width: 768px) {
+  // .section {
+  //   padding: 0 42px;
+
+  //   &__inner {
+  //     margin: 0 auto;
+  //   }
+  // }
+}
