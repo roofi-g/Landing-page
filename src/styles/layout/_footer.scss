@@ -16,8 +16,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: clamp(40px, 4vw, 91px);
-  padding-bottom: clamp(40px, 4vw, 96px);
+  gap: 48px;
+  flex-wrap: wrap;
+  padding-top: clamp(60px, 30vw, 91px);
+  padding-bottom: clamp(60px, 22vw, 96px);
 
   border-bottom: 1px solid rgb(255, 255, 255, 0.4);
 }
@@ -27,8 +29,8 @@
 }
 
 .contact__title {
-  font-size: 36px;
-  line-height: 46px;
+  font-size: clamp(32px, 4vw, 36px);
+  line-height: clamp(40px, 4vw, 46px);
   letter-spacing: 0.05em;
 }
 
@@ -48,7 +50,8 @@ button.button_contact {
 
 .footer__primary {
   display: flex;
-  gap: 100px;
+  gap: clamp(66px, 4vw, 100px);
+  flex-wrap: wrap;
   margin-top: clamp(40px, 4vw, 96px);
 }
 
@@ -102,10 +105,17 @@ button.button_contact {
 
 .footer__nav {
   display: flex;
-  gap: 77px;
+  align-items: center;
+  gap: clamp(56px, 10vw, 77px);
 }
 
 .footer-copyright {
   padding: 64px 0;
   opacity: 40%;
+}
+
+@media (max-width: 360px) {
+  .footer__contact {
+    justify-content: center;
+  }
 }
