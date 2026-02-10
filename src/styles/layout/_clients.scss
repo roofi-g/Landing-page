@@ -1,0 +1,13 @@
+@use '../base/variables' as *;
+
+.page-bottom-content {
+  position: relative;
+}
+
+.clients {
+  background: $blue_04;
+  color: $white;
+  width: 100vw;
+  height: 60vw;
+  border-radius: 200px 0 0 0;
+}
