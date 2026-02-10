@@ -1,0 +1,17 @@
+@use '../base/variables' as *;
+
+.input {
+  width: 100%;
+
+  border: 1px solid rgba(53, 110, 173, 0.4);
+  border-radius: 10px;
+  padding: 21px clamp(26px, 4vw, 42px);
+
+  font-family: $font-body;
+  font-weight: 300;
+
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  // color: rgba(31, 63, 104, 0.2);
+}

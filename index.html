@@ -94,7 +94,33 @@
                   <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                 </div>
                 <div>
-                  <button class="button button_contact">Let’s Talk</button>
+                  <button id="openModalWindow" class="button button_contact">Let’s Talk</button>
+                </div>
+              </div>
+
+              <div id="modalWindow" class="modal">
+                <div class="modal-content">
+                  <div class="modal-title">
+                    <h2>SEND US MESSAGE</h2>
+                    <button style="all: unset;"><img class="modal-close" src="./src/assets/icon/close.svg" alt="close"></button>
+                  </div>
+                  <form action="">
+                    <div class="modal-main">
+                      <div>
+                        <label for="">Full Name</label>
+                        <input class="input" type="text" placeholder="Your Name">
+                      </div>
+                      <div>
+                        <label for="">Email</label>
+                        <input class="input" type="text" placeholder="Your Email">
+                      </div>
+                      <div>
+                        <label for="">Message</label>
+                        <textarea class="input textarea" placeholder="Your Message" maxlength="200"></textarea>
+                      </div>
+                    </div>
+                    <button class="button button-modal">SUBMIT</button>
+                  </form>
                 </div>
               </div>
 
