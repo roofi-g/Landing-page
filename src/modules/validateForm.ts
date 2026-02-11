@@ -18,7 +18,7 @@ class validateForm {
   validateForm() {
     let isValid = true;
     this.inputs.forEach(input => {
-      
+
       this.clearError(input);
       const value = input.value.trim();
 
@@ -70,8 +70,21 @@ class validateForm {
   }
 
   onSuccess() {
-    console.log('Форма валидна');
-    this.form.reset();
+    fetch('api/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: this.form.name.value,
+      }),
+    })
+    .then(res => res.json())
+    .then(() => {
+      console.log('Форма валидна');
+      this.form.reset();
+    })
+    .catch(() => {
+      console.log('Ошибка отправки');
+    })
   }
 }
 
