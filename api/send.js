@@ -7,17 +7,12 @@ export default async function handler(req, res) {
   }
 
   const { name } = req.body;
-
-  if (!name) {
-    return res.status(400).json({ error: "Name is required" });
-  }
-
-  const BOT_TOKEN = process.env.BOT_TOKEN;
-  const CHAT_ID = process.env.CHAT_ID;
-
   const text = `Новая заявка. Имя: ${name}`;
 
   try {
+    const BOT_TOKEN = process.env.BOT_TOKEN;
+    const CHAT_ID = process.env.CHAT_ID;
+
     const tgRes = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -27,8 +22,11 @@ export default async function handler(req, res) {
       }),
     });
 
+    const tgText = await tgRes.text();
+
     if (!tgRes.ok) {
-      throw new Error("Telegram error"); 
+      console.error('Ошибка Telegram:', tgText);
+      return res.status(500).json({ error: tgText });
     }
 
     return res.status(200).json({ ok: true });
