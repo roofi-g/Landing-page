@@ -101,10 +101,12 @@ class validateForm {
       const formData = new FormData(this.form);
   
       const contactData = {
-        name: formData.get('name') as string || '',
-        email: formData.get('email') as string || '',
-        message: formData.get('message') as string || ''
+        name: formData.get('name')?.toString() || '',
+        email: formData.get('email')?.toString() || '',
+        message: formData.get('message')?.toString() || ''
       };
+
+      console.log('Sending data:', contactData);
 
       const response = await fetch('/api/send', {
         method: 'POST',
@@ -115,15 +117,26 @@ class validateForm {
         body: JSON.stringify(contactData),
       });
 
-      const data = await response.json();
+      const responseText = await response.text();
+      console.log('Response status:', response.status);
+      console.log('Response text:', responseText);
 
+      let data;
+      try {
+        data = JSON.parse(responseText);
+      } catch (e) {
+        console.error('Failed to parse JSON:', responseText);
+        throw new Error('Invalid server response');
+      }
+
+      // const data = await response.json();
       if (response.ok) {
         this.changeModalWindow();
         this.form.reset();
       } else {
-        console.error(`Ошибка: ${data.details}`);
+        console.error(`Ошибка: ${data.details || data.error || 'Unknown error'}`);
       }
-    } catch (err: any) {
+    } catch (err) {
       console.error("Ошибка отправки: ", err.message);
     }
   }
