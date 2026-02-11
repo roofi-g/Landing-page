@@ -1,13 +1,16 @@
 class validateForm {
+  private form: HTMLFormElement;
+  private inputs: NodeListOf<HTMLInputElement | HTMLTextAreaElement>;
+  private title: HTMLElement | null;
 
-  constructor(form, titleModal) {
+  constructor(form: HTMLFormElement, titleModal: HTMLElement | null) {
     this.form = form;
     this.inputs = form.querySelectorAll(".js-validate");
     this.title = titleModal;
   }
 
-  init() {
-    this.form.addEventListener("submit", (event) => {
+  public init(): void {
+    this.form.addEventListener("submit", (event: SubmitEvent) => {
       event.preventDefault();
       const isValid = this.validateForm();
 
@@ -17,9 +20,10 @@ class validateForm {
     });
   }
 
-  validateForm() {
+  private validateForm(): boolean {
     let isValid = true;
-    this.inputs.forEach((input) => {
+
+    this.inputs.forEach((input: HTMLInputElement | HTMLTextAreaElement) => {
 
       this.clearError(input);
       const value = input.value.trim();
@@ -55,8 +59,10 @@ class validateForm {
     return isValid;
   }
 
-  changeModalWindow() {
-    this.title.textContent = "Успешно отправлено!";
+  private changeModalWindow(): void {
+    if (this.title) {
+      this.title.textContent = "Успешно отправлено!";
+    }
     this.form.innerHTML = `
       <div class="success-message">
         <p>Спасибо, данные сохранены.</p>
@@ -64,45 +70,67 @@ class validateForm {
     `;
   }
 
-  setError(input, message) {
+  private setError(input: HTMLInputElement | HTMLTextAreaElement, message: string): void {
     const field = input.closest(".field");
-    const error = field.querySelector(".error-message");
-    
-    input.classList.add("error");
-    error.textContent = message;
+
+    if (!field) return;
+
+    const error = field.querySelector('.error-message');
+
+    if (error) {
+      input.classList.add('error');
+      error.textContent = message;
+    }
   }
 
-  clearError(input) {
+  private clearError(input: HTMLInputElement | HTMLTextAreaElement): void {
     const field = input.closest(".field");
+
+    if (!field) return;
+
     const error = field.querySelector(".error-message");
-    
-    input.classList.remove("error");
-    error.textContent = "";
+
+    if (error) {
+      input.classList.remove('error');
+      error.textContent = '';
+    }
   }
 
-  onSuccess() {
-    fetch("api/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: this.form.name.value,
-      }),
-    })
-      .then((res) => res.json())
-      .then(() => {
+  private async onSuccess(): Promise<void> {
+    try {
+      const formData = new FormData(this.form);
+  
+      const contactData = {
+        name: formData.get('name') as string || '',
+        email: formData.get('email') as string || '',
+        message: formData.get('message') as string || ''
+      };
+
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 
+          'application/json' 
+        },
+        body: JSON.stringify(contactData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
         this.changeModalWindow();
         this.form.reset();
-        return;
-      })
-      .catch((err) => {
-        console.error("Ошибка отправки: ", err.message);
-      });
+      } else {
+        console.error(`Ошибка: ${data.details}`);
+      }
+    } catch (err: any) {
+      console.error("Ошибка отправки: ", err.message);
+    }
   }
-
 }
 
-const form = document.getElementById("modalForm");
-const titleModal = document.querySelector(".modal-title h2");
+const form = document.getElementById("modalForm") as HTMLFormElement;
+const titleModal = document.querySelector(".modal-title h2") as HTMLElement;
 
 const validator = new validateForm(form, titleModal);
 validator.init();
