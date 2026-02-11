@@ -104,22 +104,25 @@
                     <h2>SEND US MESSAGE</h2>
                     <button style="all: unset;"><img class="modal-close" src="./src/assets/icon/close.svg" alt="close"></button>
                   </div>
-                  <form action="">
+                  <form id="modalForm">
                     <div class="modal-main">
-                      <div>
-                        <label for="">Full Name</label>
-                        <input class="input" type="text" placeholder="Your Name">
+                      <div class="field">
+                        <label for="modal-name">Full Name</label>
+                        <input id="modal-name" class="input js-validate name" name="name" type="text" placeholder="Your Name">
+                        <div class="error-message"></div>
                       </div>
-                      <div>
-                        <label for="">Email</label>
-                        <input class="input" type="text" placeholder="Your Email">
+                      <div class="field">
+                        <label for="modal-email">Email</label>
+                        <input id="modal-email" class="input js-validate email" type="text" placeholder="Your Email">
+                        <div class="error-message"></div>
                       </div>
-                      <div>
-                        <label for="">Message</label>
-                        <textarea class="input textarea" placeholder="Your Message" maxlength="200"></textarea>
+                      <div class="field">
+                        <label for="modal-message">Message</label>
+                        <textarea id="modal-message" class="input textarea js-validate message" placeholder="Your Message" maxlength="200"></textarea>
+                        <div class="error-message"></div>
                       </div>
                     </div>
-                    <button class="button button-modal">SUBMIT</button>
+                    <button type="submit" class="button button-modal">SUBMIT</button>
                   </form>
                 </div>
               </div>

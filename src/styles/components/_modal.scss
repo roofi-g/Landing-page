@@ -43,10 +43,10 @@
 .modal-main {
   display: flex;
   flex-direction: column;
-  gap: clamp(26px, 4vw, 32px);
+  gap: clamp(10px, 4vw, 12px);
 
   margin-top: clamp(20px, 4vw, 48px);
-  margin-bottom: clamp(40px, 10vw, 72px);
+  margin-bottom: clamp(40px, 10vw, 60px);
 
   label {
     font-size: 16px;
@@ -64,6 +64,17 @@
 
 .button-modal {
   width: 100%;
+}
+
+.error-message {
+  min-height: 15px;
+  color: red;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.error {
+  border: 1px solid red;
 }
 
 
