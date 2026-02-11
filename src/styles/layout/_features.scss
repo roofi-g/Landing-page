@@ -1,8 +1,8 @@
 @use '../base/variables' as *;
 
 .features {
-  margin-top: clamp(80px, 4vw, 180px);
-  margin-bottom: clamp(100px, 4vw, 212px);
+  margin-top: clamp(80px, 14vw, 180px);
+  margin-bottom: clamp(100px, 16vw, 212px);
 
   &__title {
     max-width: 356px;

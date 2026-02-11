@@ -106,8 +106,6 @@ class validateForm {
         message: formData.get('message')?.toString() || ''
       };
 
-      console.log('Sending data:', contactData);
-
       const response = await fetch('/api/send', {
         method: 'POST',
         headers: { 
@@ -118,8 +116,6 @@ class validateForm {
       });
 
       const responseText = await response.text();
-      console.log('Response status:', response.status);
-      console.log('Response text:', responseText);
 
       let data;
       try {
@@ -129,14 +125,13 @@ class validateForm {
         throw new Error('Invalid server response');
       }
 
-      // const data = await response.json();
       if (response.ok) {
         this.changeModalWindow();
         this.form.reset();
       } else {
         console.error(`Ошибка: ${data.details || data.error || 'Unknown error'}`);
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error("Ошибка отправки: ", err.message);
     }
   }
