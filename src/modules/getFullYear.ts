@@ -1,1 +1,1 @@
-document.getElementById('date').textContent = new Date().toLocaleDateString('ru-RU', { year: 'numeric' });
+document.getElementById("date").textContent = new Date().toLocaleDateString("ru-RU", { year: "numeric" });
