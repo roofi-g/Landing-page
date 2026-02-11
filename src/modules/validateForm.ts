@@ -1,7 +1,8 @@
 class validateForm {
-  constructor(form) {
+  constructor(form, titleModal) {
     this.form = form;
-    this.inputs = form.querySelectorAll('.js-validate')
+    this.inputs = form.querySelectorAll('.js-validate');
+    this.title = titleModal;
   }
 
   init() {
@@ -53,6 +54,15 @@ class validateForm {
     return isValid;
   }
 
+  changeModalWindow() {
+    this.title.textContent = 'Успешно отправлено!';
+    this.form.innerHTML = `
+      <div class="success-message">
+        <p>Спасибо, данные сохранены.</p>
+      </div>
+    `
+  }
+
   setError(input, message) {
     const field = input.closest('.field');
     const error = field.querySelector('.error-message');
@@ -80,6 +90,7 @@ class validateForm {
     .then(res => res.json())
     .then(() => {
       console.log('Форма валидна');
+      this.changeModalWindow();
       this.form.reset();
     })
     .catch(() => {
@@ -89,5 +100,7 @@ class validateForm {
 }
 
 const form = document.getElementById('modalForm');
-const validator = new validateForm(form);
+const titleModal = document.querySelector('.modal-title h2');
+
+const validator = new validateForm(form, titleModal);
 validator.init();
