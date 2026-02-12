@@ -18,3 +18,5 @@
 
 ## Демо
 Ссылка на Vercel: https://landing-page-omega-virid-21.vercel.app/
+
+Телеграмм канал, куда приходят заявки: https://t.me/+2jQHZ_ROVHdkZTdi
