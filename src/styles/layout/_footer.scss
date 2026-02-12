@@ -114,7 +114,7 @@ button.button_contact {
   opacity: 40%;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 360px) and (max-width: 600px) {
   .footer__contact {
     justify-content: center;
   }
