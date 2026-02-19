@@ -19,6 +19,7 @@
     "vite": "^7.2.4"
   },
   "dependencies": {
-    "@delement/eslint-config-master": "^1.2.0"
+    "@delement/eslint-config-master": "^1.2.0",
+    "normalize.css": "^8.0.1"
   }
 }
