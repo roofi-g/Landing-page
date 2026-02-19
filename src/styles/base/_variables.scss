@@ -1,20 +1,32 @@
 $font-heading: 'Galien', serif;
 $font-body: 'Gilroy', system-ui, -apple-system, sans-serif;
 
-$white: rgba(255, 255, 255, 1);
+:root {
+  --white: rgba(255, 255, 255, 1);
 
-$blue_01: #1F3F68;
-$blue_02: #316099;
+  --blue_01: #1F3F68;
+  --blue_02: #316099;
+  --blue_04: #5A98D0;
+  --blue_05: #98C3E8;
 
-$blue_04: #5A98D0;
-$blue_05: #98C3E8;
+  --color-shadow: rgba(16, 112, 177, 0.2);
+  --color-button-shadow: rgba(53, 110, 173, 0.2);
+  --color-button-shadow-hover: rgba(53, 110, 173, 0.3);
+}
+
+$white: var(--white);
+
+$blue_01: var(--blue_01);
+$blue_02: var(--blue_02);
+$blue_04: var(--blue_04);
+$blue_05: var(--blue_05);
 
 $color-body: $blue_01;
-$color-shadow: rgba(16, 112, 177, 0.2);
+$color-shadow: var(--color-shadow);
 
 $color-button: $blue_04;
-$color-button-shadow: rgba(53, 110, 173, 0.2);
-$color-button-shadow-hover: rgba(53, 110, 173, 0.3);
+$color-button-shadow: var(--color-button-shadow);
+$color-button-shadow-hover: var(--color-button-shadow-hover);
 
 $shadow-button: 5px 10px 20px $color-button-shadow;
 $shadow-button-hover: 5px 10px 20px $color-button-shadow-hover;
