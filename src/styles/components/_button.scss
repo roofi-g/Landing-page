@@ -1,13 +1,19 @@
 @use '../base/variables' as *;
 
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 15px 48px;
+
   color: $white;
   background-color: $color-button;
   border: none;
   border-radius: 10px;
   box-shadow: $shadow-button;
 
+  font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.04em;
 
