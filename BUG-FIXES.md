@@ -25,8 +25,8 @@
 **Исправлено:** [ ]
 
 ### 5 - Неправильная семантика
-- **Описание:** В данном кейсе это не кнопка, а ссылка. [Скриншот.](https://drive.google.com/uc?id=1-Kmt2Xfzjrn_iD5QdlS1l13KSGTM-8NT)
 
+- **Описание:** В данном кейсе это не кнопка, а ссылка. [Скриншот.](https://drive.google.com/uc?id=1-Kmt2Xfzjrn_iD5QdlS1l13KSGTM-8NT)
 - **Исправлено:** [✓]  
 - **Комментарий:** Исправила тег 'button' на тег 'a'
 
@@ -36,9 +36,10 @@
 **Исправлено:** [ ]
 
 ### 7 - Кнопки должны иметь cursor: pointer
-**Описание:** С т.з. UX все кнопки должны иметь cursor: pointer. https://drive.google.com/uc?id=1EMeJtDp1qU1Ktnr0QXhCCsVNu9op4GCq
 
-**Исправлено:** [ ]
+- **Описание:** С т.з. UX все кнопки должны иметь cursor: pointer. [Скриншот.](https://drive.google.com/uc?id=1EMeJtDp1qU1Ktnr0QXhCCsVNu9op4GCq)
+- **Исправлено:** [✓]
+- **Комментарий:** Добавила 'cursor: pointer' в класс 'button'
 
 ### 8 - 
 **Описание:** Данные элементы можно сверстать в одном потоке, т.е. без разделения на отдельные блоки. https://drive.google.com/uc?id=1yV7hAXLouA_NSUH3O7BLbMPeEBuBRNB_
