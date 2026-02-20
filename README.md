@@ -14,7 +14,9 @@
 ## Время выполнения
 Подробный лог времени по пунктам находится в TIME-LOG.md
 
-Общее время: X часов Y минут
+Общее время: 30 часов 20 минут
 
 ## Демо
-[Ссылка на GitHub Pages / Vercel / Netlify]
+Ссылка на Vercel: https://landing-page-omega-virid-21.vercel.app/
+
+Телеграмм канал, куда приходят заявки: https://t.me/+2jQHZ_ROVHdkZTdi
