@@ -5,59 +5,50 @@
   margin-bottom: clamp(100px, 16vw, 212px);
 
   &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+
     max-width: 356px;
     color: $blue_02;
     font-size: clamp(24px, 3.5vw, 34px);
     line-height: clamp(32px, 5vw, 46px);
     letter-spacing: 0.05em;
   }
-}
 
-@media (min-width: 768px) {
-  .features__grid {
+  &__grid {
     display: grid;
-    grid-template-columns: auto auto;
-    gap: clamp(50px, 4vw, 100px);
+    justify-items: end;
     justify-content: end;
-    align-items: center;
+    gap: clamp(50px, 8vw, 100px);
+
     position: relative;
-  }
 
-  .features__title {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+    grid-template-areas:
+    "A A A A   B B B B"
+    "A A A A   C C C C";
 
-  .features__right {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(50px, 4vw, 100px);
+    .grid-1 {
+      grid-area: A;
+      align-self : center;
+    }
+    .grid-2 {
+      grid-area: B; 
+    }
+    .grid-3 {
+      grid-area: C;
+    }
   }
 }
 
-@media (max-width: 768px) {
-  .features__title {
-    max-width: 260px;
-  }
-  .features__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 360px) and (max-width: 600px) {
+@media (min-width: 340px) and (max-width: 600px) {
   .features__grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
-  }
-  .features__right {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
   }
   .features__title {
-    margin-bottom: 40px;
+    position: static;
+    margin-bottom: 16px;
     text-align: center;
   }
 }
