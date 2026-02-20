@@ -1,11 +1,13 @@
 @use '../base/variables' as *;
 
-.page-bottom-content {
-  position: relative;
+.page--home {
+  .clients,
+  .footer-bg-clients {
+    background: $blue_04;
+  }
 }
 
 .clients {
-  background: $blue_04;
   color: $white;
   width: 100vw;
   height: 105vw;
