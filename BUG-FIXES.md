@@ -59,14 +59,15 @@
 
 ### 11 - Использование CDN
 
-- **Описание:** Использование CDN, который блокируют в России, — не самая удачная идея. https://drive.google.com/uc?id=11gctjYyqvHylOfNyr4KSP8TJfn81bYat
+- **Описание:** Использование CDN, который блокируют в России, — не самая удачная идея. [Скриншот.](https://drive.google.com/uc?id=11gctjYyqvHylOfNyr4KSP8TJfn81bYat)
 - **Исправлено:** [✓]
 - **Комментарий:** Удалила CDN и установила зависимость
 
-### 12 - 
-**Описание:** Для лучшего UX подобные элементы следует делать ссылками с префиксами mailto и tel соответственно. https://drive.google.com/uc?id=19WzWKGAK4RPldIDUpcbICOIyU_ry2Iio
+### 12 - Нет префиксов mailto и tel
 
-**Исправлено:** [ ]
+- **Описание:** Для лучшего UX подобные элементы следует делать ссылками с префиксами mailto и tel соответственно. [Скриншот.](https://drive.google.com/uc?id=19WzWKGAK4RPldIDUpcbICOIyU_ry2Iio)
+- **Исправлено:** [✓]
+- **Комментарий:** Добавила префиксы mailto и tel
 
 ### 13 - 
 **Описание:** На форме не предусмотрена видимая пользователю обработка ошибок. https://drive.google.com/uc?id=1EoTBfAc0MceW5rv6qRYhZ_eAAirgsyeV
