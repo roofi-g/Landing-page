@@ -3,8 +3,8 @@
 @use './base/variables';
 @use './base/base';
 
+@use './layout/container';
 @use './layout/header';
-@use './layout/section';
 @use './layout/hero';
 @use './layout/features';
 @use './layout/clients';

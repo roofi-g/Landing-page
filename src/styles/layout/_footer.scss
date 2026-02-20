@@ -3,8 +3,12 @@
 .footer {
    background: $blue_02;
    color: $white;
-   width: 93vw;
+   width: 95vw;
    border-radius: 0 200px 0 0;
+
+   &__container {
+    padding-left: 2.5vw;
+   }
 }
 
 .footer__contact {
