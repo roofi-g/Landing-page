@@ -4,66 +4,66 @@
   display: none;
   position: fixed;
   z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+
   background-color: rgba(0, 0, 0, 0.5);
   animation: fadeIn 0.6s;
-}
 
-.modal-content {
-  position: relative;
-  width: 90%;
-  max-width: 600px;
-  margin: 3% auto;
-  padding: clamp(20px, 4vw, 56px);
-  background-color: $white;
-  color: $blue_01;
-  border-radius: 10px;
-  box-shadow: $shadow-card;
-  animation: slideIn 0.6s;
-}
+  &__content {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    margin: 3% auto;
+    padding: clamp(20px, 4vw, 56px);
 
-.modal-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    max-height: 90dvh;
+    overflow-y: auto;
 
-  h2 {
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0.04em;
+    background-color: $white;
+    color: $blue_01;
+    border-radius: 10px;
+    box-shadow: $shadow-card;
+    animation: slideIn 0.6s;
   }
-  img {
-    max-width: 20px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+    }
+    img {
+      max-width: 20px;
+    }
   }
-}
 
-.modal-main {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(10px, 4vw, 12px);
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px, 4vw, 12px);
 
-  margin-top: clamp(20px, 4vw, 48px);
-  margin-bottom: clamp(40px, 10vw, 60px);
+    margin-top: clamp(20px, 4vw, 48px);
+    margin-bottom: clamp(40px, 10vw, 60px);
 
-  label {
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.04em;
-    opacity: 80%;
+    label {
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      opacity: 80%;
 
-    margin-bottom: 8px;
+      margin-bottom: 8px;
+    }
+    .textarea {
+      min-height: clamp(130px, 4vw, 144px);
+    }
+    .button-modal {
+      width: 100%;
+    }
   }
-}
-
-.textarea {
-  min-height: clamp(130px, 4vw, 144px);
-}
-
-.button-modal {
-  width: 100%;
 }
 
 .error-message {
