@@ -1,15 +1,14 @@
 <!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
     <link rel="stylesheet" href="./src/styles/main.scss">
   </head>
   <body>
     <div id="app" class="page--home">
-
       <header class="header">
         <div class="header__container">
           <a class="header__logo" href="index.html"><img src="./src/assets/icon/logo.svg" alt="logo"></a>
@@ -25,7 +24,6 @@
             <a href="#" class="button">See Our Project</a>
           </div>
         </section>
-
         <section class="features">
           <div class="container features__grid">
             <h2 class="features__title">What we do to help our client grow in digital era,</h2>
@@ -61,7 +59,6 @@
             </article>
           </div>
         </section>
-
         <section class="clients">
           <div class="container">
             <div class="clients__info">
@@ -80,100 +77,96 @@
             </div>
           </div>
         </section>
-
-        <div class="footer-bg-clients">
-          <footer class="footer">
-            <div class="container footer__container">
-              <div class="footer__contact">
-                <div class="contact__info">
-                  <h3 class="contact__title">Intersted to woek<br/>with our team?</h3>
-                  <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                </div>
-                <div>
-                  <button id="openModalWindow" class="button button_contact">Let’s Talk</button>
-                </div>
-              </div>
-
-              <div id="modalWindow" class="modal">
-                <div class="modal__content">
-                  <div class="modal__title">
-                    <h2>SEND US MESSAGE</h2>
-                    <button style="all: unset;"><img class="modal-close" src="./src/assets/icon/close.svg" alt="close"></button>
-                  </div>
-                  <form id="modalForm">
-                    <div class="modal__main">
-                      <div class="field">
-                        <label for="modal-name">Full Name</label>
-                        <input id="modal-name" class="input js-validate name" name="name" type="text" placeholder="Your Name">
-                        <div class="error-message"></div>
-                      </div>
-                      <div class="field">
-                        <label for="modal-email">Email</label>
-                        <input id="modal-email" class="input js-validate email" name="email" type="text" placeholder="Your Email">
-                        <div class="error-message"></div>
-                      </div>
-                      <div class="field">
-                        <label for="modal-message">Message</label>
-                        <textarea id="modal-message" class="input textarea js-validate message" name="message" placeholder="Your Message" maxlength="200"></textarea>
-                        <div class="error-message"></div>
-                      </div>
-                    </div>
-                    <button type="submit" class="button button-modal">SUBMIT</button>
-                  </form>
-                </div>
-              </div>
-
-              <div class="footer__primary">
-                <div>
-                  <div class="footer__logo-block">
-                    <svg width="48" height="48" viewBox="0 0 48 48">
-                      <circle cx="16" cy="24" r="16" fill="#98C3E8"/>
-                      <circle cx="32" cy="24" r="15" fill="white" stroke="#316099" stroke-width="2"/>
-                      <path d="M39.3 30L34.38 16H30.96L26.06 30H29.04L29.88 27.48H35.46L36.3 30H39.3ZM32.68 19.18L34.6 24.9H30.76L32.68 19.18Z" fill="#316099"/>
-                    </svg>
-                    <h4 class="footer__logo">Afrianska</h4>
-                  </div>
-                  <ul class="footer__list footer__info">
-                    <li>
-                      <b>A.</b>Lorem ipsum dolor sit amet, 
-                      <b></b>consectetur adipisicing elit.
-                    </li>
-                    <li><b>T.</b><a href="tel:+6281273134321">+62-812-7313-4321</a></li>
-                    <li><b>E</b><a href="mailto:hello.afrian@gmail.com">hello.afrian@gmail.com</a></li>
-                  </ul>
-                </div>
-                <div class="footer__nav">
-                  <div>
-                    <h4 class="nav__title">About US</h4>
-                    <nav>
-                      <ul class="footer__list nav__list">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">What We Do</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">How It Work With Us</a></li>
-                      </ul>
-                    </nav>
-                  </div>
-                  <div>
-                    <h4 class="nav__title">Follow US</h4>
-                    <nav>
-                      <ul class="footer__list nav__list">
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Youtube</a></li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-                </div>
-                <p class="footer-copyright footer__list"><span id="date"></span> © Afrianska. All rights reserved.</p>
-              </div>
-
-            </div>
-          </footer>
-        </div>
       </main>
+
+      <div class="footer-bg-clients">
+        <footer class="footer">
+          <div class="container footer__container">
+            <div class="footer__contact">
+              <div class="contact__info">
+                <h2 class="contact__title">Intersted to woek<br>with our team?</h2>
+                <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              </div>
+              <div>
+                <button id="openModalWindow" class="button button_contact">Let’s Talk</button>
+              </div>
+            </div>
+            <div id="modalWindow" class="modal">
+              <div class="modal__content">
+                <div class="modal__title">
+                  <h2>SEND US MESSAGE</h2>
+                  <button style="all: unset;"><img class="modal-close" src="./src/assets/icon/close.svg" alt="close"></button>
+                </div>
+                <form id="modalForm">
+                  <div class="modal__main">
+                    <div class="field">
+                      <label for="modal-name">Full Name</label>
+                      <input id="modal-name" class="input js-validate name" name="name" type="text" placeholder="Your Name">
+                      <div class="error-message"></div>
+                    </div>
+                    <div class="field">
+                      <label for="modal-email">Email</label>
+                      <input id="modal-email" class="input js-validate email" name="email" type="text" placeholder="Your Email">
+                      <div class="error-message"></div>
+                    </div>
+                    <div class="field">
+                      <label for="modal-message">Message</label>
+                      <textarea id="modal-message" class="input textarea js-validate message" name="message" placeholder="Your Message" maxlength="200"></textarea>
+                      <div class="error-message"></div>
+                    </div>
+                  </div>
+                  <button type="submit" class="button button-modal">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+            <div class="footer__primary">
+              <div>
+                <div class="footer__logo-block">
+                  <svg width="48" height="48" viewBox="0 0 48 48">
+                    <circle cx="16" cy="24" r="16" fill="#98C3E8"/>
+                    <circle cx="32" cy="24" r="15" fill="white" stroke="#316099" stroke-width="2"/>
+                    <path d="M39.3 30L34.38 16H30.96L26.06 30H29.04L29.88 27.48H35.46L36.3 30H39.3ZM32.68 19.18L34.6 24.9H30.76L32.68 19.18Z" fill="#316099"/>
+                  </svg>
+                  <h3 class="footer__logo">Afrianska</h3>
+                </div>
+                <ul class="footer__list footer__info">
+                  <li>
+                    <b>A.</b>Lorem ipsum dolor sit amet, 
+                    <b></b>consectetur adipisicing elit.
+                  </li>
+                  <li><b>T.</b><a href="tel:+6281273134321">+62-812-7313-4321</a></li>
+                  <li><b>E</b><a href="mailto:hello.afrian@gmail.com">hello.afrian@gmail.com</a></li>
+                </ul>
+              </div>
+              <div class="footer__nav">
+                <div>
+                  <h4 class="nav__title">About US</h4>
+                  <nav>
+                    <ul class="footer__list nav__list">
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">What We Do</a></li>
+                      <li><a href="#">Project</a></li>
+                      <li><a href="#">How It Work With Us</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div>
+                  <h4 class="nav__title">Follow US</h4>
+                  <nav>
+                    <ul class="footer__list nav__list">
+                      <li><a href="#">Instagram</a></li>
+                      <li><a href="#">Facebook</a></li>
+                      <li><a href="#">LinkedIn</a></li>
+                      <li><a href="#">Youtube</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <p class="footer-copyright footer__list"><span id="date"></span> © Afrianska. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
 
     <script type="module" src="/src/main.ts"></script>

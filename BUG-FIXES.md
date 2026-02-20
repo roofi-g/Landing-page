@@ -75,6 +75,8 @@
 - **Исправлено:** [✓]
 - **Комментарий:** Добавила префиксы mailto и tel
 
+## Ошибки по части логики
+
 ### 13 - 
 **Описание:** На форме не предусмотрена видимая пользователю обработка ошибок. https://drive.google.com/uc?id=1EoTBfAc0MceW5rv6qRYhZ_eAAirgsyeV
 
@@ -84,8 +86,6 @@
 **Описание:** При отправке формы кнопка "submit" никак не блокируется, что позволяет пользователю флудить запросами. drive.google.com/uc?id=1kGWEwf7MuFJDUZxOB97IgvIDjuhwXzV-
 
 **Исправлено:** [ ]
-
-## Ошибки по части логики
 
 ### 15 - 
 **Описание:** Демонстрируется непонимание разницы между dependencies и devDependencies. https://drive.google.com/uc?id=1xu5pBz4v1ic-Z272b5nXRL18_6Pi8KlM
