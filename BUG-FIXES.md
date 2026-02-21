@@ -88,10 +88,11 @@
 
 **Исправлено:** [ ]
 
-### 15 - 
-**Описание:** Демонстрируется непонимание разницы между dependencies и devDependencies. https://drive.google.com/uc?id=1xu5pBz4v1ic-Z272b5nXRL18_6Pi8KlM
+### 15 - Неправильное расположение зависимости
 
-**Исправлено:** [ ]
+- **Описание:** Демонстрируется непонимание разницы между dependencies и devDependencies. [Скриншот.](https://drive.google.com/uc?id=1xu5pBz4v1ic-Z272b5nXRL18_6Pi8KlM)
+- **Исправлено:** [✓]
+- **Комментарий:** Исправила, разобралась и запомнила.
 
 ### 16 - Излишний JS копирайт
 **Описание:** Вставлять копирайт через JS излишне. https://drive.google.com/uc?id=1DWQ-jrBV3QTYGzg9rJNNjhs8UOUSaHAc

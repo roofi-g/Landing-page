@@ -10,6 +10,7 @@
     "lint": "eslint . --fix"
   },
   "devDependencies": {
+    "@delement/eslint-config-master": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^8.54.0",
     "@typescript-eslint/parser": "^8.54.0",
     "autoprefixer": "^10.4.24",
@@ -19,7 +20,6 @@
     "vite": "^7.2.4"
   },
   "dependencies": {
-    "@delement/eslint-config-master": "^1.2.0",
     "normalize.css": "^8.0.1"
   }
 }
