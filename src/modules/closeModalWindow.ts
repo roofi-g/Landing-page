@@ -1,5 +1,5 @@
 const modal = document.getElementById("modalWindow");
-const closeModalWindow = document.querySelector(".modal-close");
+const closeModalWindow = document.getElementById("modal-close");
 
 closeModalWindow?.addEventListener("click", () => {
   if (modal) {

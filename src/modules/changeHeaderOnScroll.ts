@@ -1,4 +1,4 @@
-const header = document.querySelector<HTMLElement>(".header");
+const header = document.getElementById("header");
 
 if (header) {
   window.addEventListener("scroll", () => {
