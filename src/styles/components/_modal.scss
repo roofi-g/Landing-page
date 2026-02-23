@@ -66,6 +66,15 @@
   }
 }
 
+.modal-show {
+  display: block;
+}
+
+.modal-overflow {
+  overflow: hidden;
+}
+
+
 .error-message {
   min-height: 15px;
   color: red;

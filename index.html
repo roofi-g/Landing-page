@@ -88,30 +88,31 @@
                 <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
               </div>
               <div>
-                <button id="openModalWindow" class="button button_contact">Let’s Talk</button>
+                <button id="openModalWindow" data-modal-open class="button button_contact">Let’s Talk</button>
               </div>
             </div>
-            <div id="modalWindow" class="modal">
+
+            <div id="modalWindow" class="modal" data-modal>
               <div class="modal__content">
                 <div class="modal__title">
                   <h2>SEND US MESSAGE</h2>
-                  <button style="all: unset;"><img id="modal-close" src="./src/assets/icon/close.svg" alt="close"></button>
+                  <button data-modal-close style="all: unset;"><img src="./src/assets/icon/close.svg" alt="close"></button>
                 </div>
                 <form id="modalForm">
                   <div class="modal__main">
                     <div class="field">
                       <label for="modal-name">Full Name</label>
-                      <input id="modal-name" class="input js-validate name" name="name" type="text" placeholder="Your Name">
+                      <input id="modal-name" data-input-required="name" class="input js-validate name" name="name" type="text" placeholder="Your Name">
                       <div class="error-message"></div>
                     </div>
                     <div class="field">
                       <label for="modal-email">Email</label>
-                      <input id="modal-email" class="input js-validate email" name="email" type="text" placeholder="Your Email">
+                      <input id="modal-email" data-input-required="email" class="input js-validate email" name="email" type="email" placeholder="Your Email">
                       <div class="error-message"></div>
                     </div>
                     <div class="field">
                       <label for="modal-message">Message</label>
-                      <textarea id="modal-message" class="input textarea js-validate message" name="message" placeholder="Your Message" maxlength="200"></textarea>
+                      <textarea id="modal-message" data-input-required="message" class="input textarea js-validate message" name="message" placeholder="Your Message" maxlength="200"></textarea>
                       <div class="error-message"></div>
                     </div>
                   </div>
@@ -119,6 +120,7 @@
                 </form>
               </div>
             </div>
+            
             <div class="footer__primary">
               <div>
                 <div class="footer__logo-block">

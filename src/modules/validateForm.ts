@@ -1,11 +1,11 @@
-class validateForm {
+export class ValidateForm {
   private form: HTMLFormElement;
   private inputs: NodeListOf<HTMLInputElement | HTMLTextAreaElement>;
   private title: HTMLElement | null;
 
   constructor(form: HTMLFormElement, titleModal: HTMLElement | null) {
     this.form = form;
-    this.inputs = form.querySelectorAll(".js-validate");
+    this.inputs = form.querySelectorAll('[data-input-required]');
     this.title = titleModal;
   }
 
@@ -136,9 +136,3 @@ class validateForm {
     }
   }
 }
-
-const form = document.getElementById("modalForm") as HTMLFormElement;
-const titleModal = document.querySelector(".modal-title h2") as HTMLElement;
-
-const validator = new validateForm(form, titleModal);
-validator.init();
