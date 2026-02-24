@@ -6,8 +6,8 @@ export class ContactForm {
   private inputs: NodeListOf<HTMLInputElement | HTMLTextAreaElement>;
   private title: HTMLElement | null;
   private validateForm: ValidatorForm;
-  blocks: NodeListOf<HTMLElement>;
-  button: HTMLButtonElement | null;
+  private blocks: NodeListOf<HTMLElement>;
+  private button: HTMLButtonElement | null;
   private isSubmitting = false;
 
   constructor(contactForm: HTMLFormElement, titleModal: HTMLElement | null) {
@@ -26,7 +26,6 @@ export class ContactForm {
   private handleSubmit = async (event: Event) => {
     event.preventDefault();
 
-    // this.showMessage('body');
     if (this.isSubmitting) return;
     if (!this.validateForm.validate()) return;
     
@@ -34,18 +33,17 @@ export class ContactForm {
     this.toggleButton(true);
 
     const data = this.serializeForm();
-    console.log(data);
     
     try {
       await sendFormData(data);
 
       this.showMessage('success');
-      this.inputs.forEach(input => input.value = '');
-      // this.form.reset();
+      this.form.reset();
 
     } catch (error: unknown) {
-      console.error("Ошибка отправки формы:", error)
+      console.error("Ошибка отправки:", error)
       this.showMessage('error');
+
     } finally {
       this.isSubmitting = false;
       this.toggleButton(false);
@@ -76,10 +74,17 @@ export class ContactForm {
   }
 
   private toggleButton(disabled: boolean) {
-    if (this.button) {
-      this.button.disabled = disabled;
-      this.button.textContent = disabled ? "Submit..." : "SUBMIT";
-    }
+    if (!this.button) return;
+
+    this.button.disabled = disabled;
+    this.button.textContent = disabled ? "Submit..." : "SUBMIT";
+  }
+
+  public resetFormState() {
+    this.showMessage('body');
+    this.form.reset();
+    this.isSubmitting = false;
+    this.toggleButton(false);
   }
 
   public destroy(): void {
