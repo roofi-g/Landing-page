@@ -1,4 +1,8 @@
+/**
+ *
+ */
 export class ValidatorForm {
+
   private inputs: NodeListOf<HTMLInputElement | HTMLTextAreaElement>;
   
   constructor (inputs: NodeListOf<HTMLInputElement | HTMLTextAreaElement>) {
@@ -72,7 +76,7 @@ export class ValidatorForm {
 
 
   private setError(input: HTMLInputElement | HTMLTextAreaElement, message: string): void {
-    input.classList.add('error');
+    input.classList.add("error");
 
     const errorElem = input.nextElementSibling;
     if (errorElem) {
@@ -81,11 +85,12 @@ export class ValidatorForm {
   }
 
   private clearError(input: HTMLInputElement | HTMLTextAreaElement): void {
-    input.classList.remove('error');
+    input.classList.remove("error");
 
     const errorElem = input.nextElementSibling;
     if (errorElem) {
-      errorElem.textContent = '';
+      errorElem.textContent = "";
     }
   }
+
 }

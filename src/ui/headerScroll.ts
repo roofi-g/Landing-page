@@ -1,18 +1,24 @@
+/**
+ *
+ */
 export class HeaderScroll {
+
   header: HTMLElement;
+
   constructor(header: HTMLElement) {
     this.header = header;
   }
 
   init() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   }
 
   destroy() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   private handleScroll = () => {
-    this.header.classList.toggle('scrolled', window.scrollY > 50);
-  }
+    this.header.classList.toggle("scrolled", window.scrollY > 50);
+  };
+
 }
