@@ -95,28 +95,56 @@
             <div id="modalWindow" class="modal" data-modal>
               <div class="modal__content">
                 <div class="modal__title">
-                  <h2>SEND US MESSAGE</h2>
+                  <h2 id="modal-title">SEND US MESSAGE</h2>
                   <button data-modal-close style="all: unset;"><img src="./src/assets/icon/close.svg" alt="close"></button>
                 </div>
-                <form id="modalForm">
-                  <div class="modal__main">
-                    <div class="field">
-                      <label for="modal-name">Full Name</label>
-                      <input id="modal-name" data-input-required="name" class="input js-validate name" name="name" type="text" placeholder="Your Name">
-                      <div class="error-message"></div>
+                <form id="contactForm" novalidate>
+                  <div data-form="body">
+                    <div class="modal__main">
+                      <div class="field">
+                        <label for="modal-name">Full Name</label>
+                        <input 
+                          id="modal-name" 
+                          data-input-required="name" 
+                          name="name"
+                          class="input"
+                          type="text"
+                          placeholder="Your Name" 
+                          maxlength="100">
+                        <div data-error="name" class="error-message"></div>
+                      </div>
+                      <div class="field">
+                        <label for="modal-email">Email</label>
+                        <input 
+                          id="modal-email" 
+                          data-input-required="email" 
+                          name="email"
+                          class="input"
+                          type="email"                        
+                          placeholder="Your Email" 
+                          maxlength="100">
+                        <div data-error="email" class="error-message"></div>
+                      </div>
+                      <div class="field">
+                        <label for="modal-message">Message</label>
+                        <textarea 
+                          id="modal-message" 
+                          data-input-required="message" 
+                          name="message"
+                          class="input textarea" 
+                          placeholder="Your Message" 
+                          maxlength="200"></textarea>
+                        <div data-error="message" class="error-message"></div>
+                      </div>
                     </div>
-                    <div class="field">
-                      <label for="modal-email">Email</label>
-                      <input id="modal-email" data-input-required="email" class="input js-validate email" name="email" type="email" placeholder="Your Email">
-                      <div class="error-message"></div>
-                    </div>
-                    <div class="field">
-                      <label for="modal-message">Message</label>
-                      <textarea id="modal-message" data-input-required="message" class="input textarea js-validate message" name="message" placeholder="Your Message" maxlength="200"></textarea>
-                      <div class="error-message"></div>
-                    </div>
+                    <button type="submit" class="button button-modal">SUBMIT</button>
                   </div>
-                  <button type="submit" class="button button-modal">SUBMIT</button>
+                  <div data-form="success" class="send-message" hidden>
+                    <p>Спасибо, данные отправлены.</p>
+                  </div>
+                  <div data-form="error" class="send-message" hidden>
+                    <p>Ошибка, попробуйте снова.</p>
+                  </div>
                 </form>
               </div>
             </div>
