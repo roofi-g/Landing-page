@@ -77,10 +77,11 @@ export class ContactForm {
 
   private showMessage(state: "body" | "success" | "error"): void {
     if (this.title) {
-      this.title.textContent = 
-        (state === "success") 
-          ? "Успешно отправлено!" 
-          : "Ошибка при отправке!";
+      if (state === "success") {
+        this.title.textContent = "Успешно отправлено!";
+      } else if (state === "error") {
+        this.title.textContent = "Ошибка при отправке!";
+      }
     } 
     this.blocks.forEach((block) => {
       block.hidden = block.dataset.form !== state;

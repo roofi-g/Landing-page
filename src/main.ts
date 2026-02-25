@@ -1,13 +1,13 @@
-import "./ui/getFullYear";
-
 import { ContactForm } from "./components/contactForm";
 import { HeaderScroll } from "./ui/headerScroll";
 import { Modal } from "./ui/modal";
+import { getDate } from "./utils/getFullYear";
 
 const header = document.getElementById("header");
+const dateElement = document.getElementById("date");
 
 const modalElem = document.querySelector<HTMLElement>("[data-modal]");
-const openModalBtn = document.querySelector("[data-modal-open]");
+const openModalBtn = document.querySelector<HTMLButtonElement>("[data-modal-open]");
 const contactForm = document.getElementById("contactForm");
 const titleModal = document.getElementById("modal-title");
 
@@ -20,8 +20,14 @@ if (modalElem && openModalBtn && contactForm instanceof HTMLFormElement && title
   const modal = new Modal(modalElem);
   const form = new ContactForm(contactForm, titleModal);
 
-  openModalBtn?.addEventListener("click", () => {
+  const handleOpenModal = () => {
     modal.open();
     form.resetFormState();
-  });
+  };
+
+  openModalBtn.addEventListener("click", handleOpenModal);
+}
+
+if (dateElement) {
+  getDate(dateElement);
 }
